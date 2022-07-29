@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69b5db83-f5bf-4ba7-ade0-9fc14df790e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/5_letter_words.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/application/WordleObservable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/application/WordleObservable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/WordleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/WordleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/WordleGridRowDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/WordleGridRowDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/Dictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/LetterGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/LetterGrid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/LetterRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/LetterRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/LetterSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/LetterSquare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/View.java" afterDir="false" />
-    </list>
+    <list default="true" id="69b5db83-f5bf-4ba7-ade0-9fc14df790e0" name="Changes" comment="most functionality works; need to add logic for winning and printing out correct word if they run out of tries; also need to add functionality for saving scores" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,6 +77,14 @@
       <option name="presentableId" value="Default" />
       <updated>1658761258155</updated>
     </task>
+    <task id="LOCAL-00001" summary="most functionality works; need to add logic for winning and printing out correct word if they run out of tries; also need to add functionality for saving scores">
+      <created>1659132666023</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659132666023</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +97,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="most functionality works; need to add logic for winning and printing out correct word if they run out of tries; also need to add functionality for saving scores" />
+    <option name="LAST_COMMIT_MESSAGE" value="most functionality works; need to add logic for winning and printing out correct word if they run out of tries; also need to add functionality for saving scores" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
