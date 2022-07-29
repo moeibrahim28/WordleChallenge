@@ -1,5 +1,9 @@
 package org.example.ui;
 
+import org.example.dto.WordleGridDTO;
+import org.example.dto.WordleGridRowDTO;
+import org.example.model.LetterSquareState;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
@@ -17,4 +21,15 @@ public class LetterGrid extends JPanel {
     private final void populate() {
         this.rows.forEach(this::add);
     }
+
+  public void updateRows(WordleGridDTO wordleGridDTO){
+
+        for(int i =0; i<wordleGridDTO.getRows().size();i++){
+            rows.get(i).updateRow(wordleGridDTO.getRows().get(i));
+
+        }
+
+  }
+
+
 }

@@ -11,4 +11,8 @@ public abstract class WordleObservable {
     protected void notifyObservers(WordleDTO dto) {
         this.observers.forEach(observer -> observer.onUpdate(dto));
     }
+
+    public void addObserver(WordleObserver wordleObserver){
+        observers.add(wordleObserver);
+    }
 }

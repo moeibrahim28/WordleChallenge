@@ -1,6 +1,8 @@
 package org.example;
 
+import org.example.application.WordleObservable;
 import org.example.controller.Controller;
+import org.example.dto.WordleDTO;
 import org.example.model.Model;
 import org.example.ui.View;
 
@@ -11,6 +13,7 @@ public class Main {
         Controller controller = new Controller(model);
         View view = new View(controller);
         view.initialize();
+        model.addObserver(view);
 
     }
 }

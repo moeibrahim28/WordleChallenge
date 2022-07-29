@@ -14,4 +14,12 @@ public class LetterSquare extends JButton {
         this.letter = ' ';
         this.state = LetterSquareState.EMPTY;
     }
+
+    public LetterSquareState getState() {
+        return state;
+    }
+
+    public void setState(LetterSquareState state) {
+        this.state = state;
+    }
 }

@@ -1,5 +1,7 @@
 package org.example.service;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -16,12 +18,26 @@ public class Dictionary {
     private Map<String, Future<Set<String>>> startingLetterToWords;
     private ExecutorService executorService;
 
+    private List<String> fiveLetterWords=new ArrayList<>();
+    private final String fileName="5_letter_words.csv";
+
     private HttpClient client;
 
     private Dictionary() {
         this.startingLetterToWords = new ConcurrentHashMap<>();
         this.executorService = Executors.newFixedThreadPool(1);
         this.client = HttpClient.newHttpClient();
+
+        try (Scanner scanner = new Scanner(new File(fileName))){
+            scanner.useDelimiter(",");
+
+            while(scanner.hasNext()){
+            fiveLetterWords.add(scanner.next());
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     public synchronized static Dictionary getInstance() {
@@ -56,8 +72,6 @@ public class Dictionary {
         System.out.println(LocalTime.now() + "--- Fetching words that start with '" + startingLetter + "'");
         startingLetter = startingLetter.toLowerCase();
         try {
-            Thread.sleep(5_000); // simulate a slower connection
-
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create("https://localstorage.tools/game/word/dictionary/" + startingLetter + ".txt"))
                     .build();
@@ -70,5 +84,11 @@ public class Dictionary {
             e.printStackTrace();
         }
         return Collections.emptySet();
+    }
+
+    public String getRandomWord() {
+        Random random = new Random();
+        int randomIndex= random.nextInt(fiveLetterWords.size());
+        return fiveLetterWords.get(randomIndex);
     }
 }

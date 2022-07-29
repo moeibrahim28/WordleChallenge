@@ -37,5 +37,11 @@ public class View implements WordleObserver {
     @Override
     public void onUpdate(WordleDTO dto) {
         // TODO - what should happen to the "view" when the model has updated data?
+        //display the WordleDTO
+
+
+        letterGrid.updateRows(dto.getGrid());
+
+
     }
 }
