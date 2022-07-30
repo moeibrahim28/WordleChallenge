@@ -12,6 +12,7 @@ import org.example.service.Dictionary;
 import javax.swing.*;
 import java.io.File;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class Model extends WordleObservable {
     private final List<Character> characterListCorrectWord;
     private final String fileName = "user.json";
     private final User user;
+    private static final DecimalFormat df = new DecimalFormat("0.00");
     private final JsonFileUserOutputService jsonFileUserOutputService = new JsonFileUserOutputService();
     List<WordleGridRowDTO> rows = new ArrayList<>();
     WordleGridDTO wordleGridDTO = new WordleGridDTO();
@@ -115,8 +117,8 @@ public class Model extends WordleObservable {
             double percentage = user.getGamesWon() / user.getGamesPlayed();
             user.setWinPercentage(percentage);
             jsonFileUserOutputService.save(user);
-            JOptionPane.showMessageDialog(null, String.format("Games Won: " + user.getGamesWon() + "\nGames Played: " +
-                    user.getGamesPlayed() + "\nWin Percentage: " + user.getWinPercentage()));
+            JOptionPane.showMessageDialog(null, "Games Won: " + user.getGamesWon() + "\nGames Played: " +
+                    user.getGamesPlayed() + "\nWin Percentage: " + (df.format(user.getWinPercentage()*100) + "%"));
             writeJson(user);
         }
         if (attemptsMade == 5 && !wordTried.equals(correctWord)) {
@@ -125,8 +127,8 @@ public class Model extends WordleObservable {
             user.setWinPercentage(percentage);
             jsonFileUserOutputService.save(user);
             JOptionPane.showMessageDialog(null, "Sorry you lost. The correct word was: " + correctWord);
-            JOptionPane.showMessageDialog(null, String.format("Games Won: " + user.getGamesWon() + "\nGames Played: " +
-                    user.getGamesPlayed() + "\nWin Percentage: " + user.getWinPercentage()));
+            JOptionPane.showMessageDialog(null, "Games Won: " + user.getGamesWon() + "\nGames Played: " +
+                    user.getGamesPlayed() + "\nWin Percentage: " + (df.format(user.getWinPercentage()*100) + "%"));
             writeJson(user);
         }
     }
