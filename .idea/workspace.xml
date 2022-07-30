@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69b5db83-f5bf-4ba7-ade0-9fc14df790e0" name="Changes" comment="CHECK READ ME FOR THINGS LEFT TO DO">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/FileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/JsonFileUserOutputService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/UserOutputService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/WordEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/WordEntry.java" afterDir="false" />
+    <list default="true" id="69b5db83-f5bf-4ba7-ade0-9fc14df790e0" name="Changes" comment="check readme for what needs to be finished">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659132718345</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="check readme for what needs to be finished">
+      <created>1659173422386</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1659173422386</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,7 +124,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="most functionality works; need to add logic for winning and printing out correct word if they run out of tries; also need to add functionality for saving scores" />
     <MESSAGE value="CHECK READ ME FOR THINGS LEFT TO DO" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHECK READ ME FOR THINGS LEFT TO DO" />
+    <MESSAGE value="check readme for what needs to be finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="check readme for what needs to be finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
