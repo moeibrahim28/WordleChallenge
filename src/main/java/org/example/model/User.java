@@ -16,16 +16,16 @@ public class User {
 
     }
 
-    public int getGamesPlayed() {
-        return (int)gamesPlayed;
+    public double getGamesPlayed() {
+        return gamesPlayed;
     }
 
     public void setGamesPlayed(int gamesPlayed) {
         this.gamesPlayed = gamesPlayed;
     }
 
-    public int getGamesWon() {
-        return (int)gamesWon;
+    public double getGamesWon() {
+        return gamesWon;
     }
 
     public void setGamesWon(int gamesWon) {

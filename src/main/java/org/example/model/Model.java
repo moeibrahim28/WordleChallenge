@@ -41,10 +41,6 @@ public class Model extends WordleObservable {
         user = readUserFromJSON();
     }
 
-    public User getUser() {
-        return user;
-    }
-
     public User readUserFromJSON() throws JsonProcessingException {
 
         User user = null;
@@ -114,8 +110,8 @@ public class Model extends WordleObservable {
         if (wordTried.equals(correctWord)) {
             JOptionPane.showMessageDialog(null, "CONGRATS YOU GOT THE WORD RIGHT.");
             this.winner = true;
-            user.setGamesWon(user.getGamesWon() + 1);
-            user.setGamesPlayed(user.getGamesPlayed() + 1);
+            user.setGamesWon((int) (user.getGamesWon() + 1));
+            user.setGamesPlayed((int) (user.getGamesPlayed() + 1));
             double percentage = user.getGamesWon() / user.getGamesPlayed();
             user.setWinPercentage(percentage);
             jsonFileUserOutputService.save(user);
@@ -124,7 +120,7 @@ public class Model extends WordleObservable {
             writeJson(user);
         }
         if (attemptsMade == 5 && !wordTried.equals(correctWord)) {
-            user.setGamesPlayed(user.getGamesPlayed() + 1);
+            user.setGamesPlayed((int) (user.getGamesPlayed() + 1));
             double percentage = user.getGamesWon() / user.getGamesPlayed();
             user.setWinPercentage(percentage);
             jsonFileUserOutputService.save(user);
