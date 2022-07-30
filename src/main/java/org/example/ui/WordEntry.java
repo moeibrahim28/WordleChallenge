@@ -1,5 +1,6 @@
 package org.example.ui;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.example.controller.Controller;
 
 import javax.swing.*;
@@ -11,7 +12,11 @@ public class WordEntry extends JTextField {
         this.addActionListener((e) -> {
             if(isTextValid()) {
                 System.out.println("Valid");
-                controller.onWordSubmitted(getText());
+                try {
+                    controller.onWordSubmitted(getText());
+                } catch (JsonProcessingException ex) {
+                    throw new RuntimeException(ex);
+                }
                 setText("");
             }
             else {

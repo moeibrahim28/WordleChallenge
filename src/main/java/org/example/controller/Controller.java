@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.AllArgsConstructor;
 import org.example.model.Model;
 
@@ -7,7 +8,7 @@ import org.example.model.Model;
 public class Controller {
     private Model model;
 
-    public void onWordSubmitted(String word) {
+    public void onWordSubmitted(String word) throws JsonProcessingException {
         model.onWordSubmitted(word);
     }
 }

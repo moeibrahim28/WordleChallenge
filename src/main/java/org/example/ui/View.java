@@ -1,6 +1,5 @@
 package org.example.ui;
 
-import lombok.AllArgsConstructor;
 import org.example.application.WordleObserver;
 import org.example.controller.Controller;
 import org.example.dto.WordleDTO;
@@ -9,10 +8,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class View implements WordleObserver {
-    private Controller controller;
+    private final Controller controller;
 
-    private LetterGrid letterGrid;
-    private WordEntry wordEntry;
+    private final LetterGrid letterGrid;
+    private final WordEntry wordEntry;
 
     public View(Controller controller) {
         this.controller = controller;
@@ -37,9 +36,6 @@ public class View implements WordleObserver {
     @Override
     public void onUpdate(WordleDTO dto) {
         // TODO - what should happen to the "view" when the model has updated data?
-        //display the WordleDTO
-
-
         letterGrid.updateRows(dto.getGrid());
 
 
