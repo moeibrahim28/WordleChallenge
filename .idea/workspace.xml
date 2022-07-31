@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="69b5db83-f5bf-4ba7-ade0-9fc14df790e0" name="Changes" comment="fixed win percentage calculation">
+    <list default="true" id="69b5db83-f5bf-4ba7-ade0-9fc14df790e0" name="Changes" comment="fixed win percentage print format">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/LettersUsedBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/WordleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/WordleDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/LetterSquare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/LetterSquare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ui/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ui/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659173910464</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed win percentage print format">
+      <created>1659174362749</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659174362750</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,7 +145,8 @@
     <MESSAGE value="CHECK READ ME FOR THINGS LEFT TO DO" />
     <MESSAGE value="check readme for what needs to be finished" />
     <MESSAGE value="fixed win percentage calculation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed win percentage calculation" />
+    <MESSAGE value="fixed win percentage print format" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed win percentage print format" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -144,9 +157,9 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/model/Model.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="30" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/ui/LettersUsedBox.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

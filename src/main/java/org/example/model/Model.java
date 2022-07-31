@@ -14,7 +14,9 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Model extends WordleObservable {
     //ALL GAME LOGIC THAT PASSES WORDLEDTO BACK TO VIEW
@@ -30,6 +32,8 @@ public class Model extends WordleObservable {
     private final JsonFileUserOutputService jsonFileUserOutputService = new JsonFileUserOutputService();
     List<WordleGridRowDTO> rows = new ArrayList<>();
     WordleGridDTO wordleGridDTO = new WordleGridDTO();
+    WordleDTO wordleDTO = new WordleDTO();
+    Set<Character> characterSetGuess = new HashSet<>();
     private int attemptsMade = 0;
     private String wordTried;
     private boolean winner = false;
@@ -68,6 +72,11 @@ public class Model extends WordleObservable {
         // already checked that it is valid(all letters) and is of length 5
         if (dictionary.isValidWord(word)) {
             wordTried = word;
+
+            for (char ch : wordTried.toCharArray()) {
+                characterSetGuess.add(ch);
+            }
+            wordleDTO.setPreviouslyUsedCharacters(characterSetGuess);
             this.notifyObservers(createWordleDTO());
         } else {
             JOptionPane.showMessageDialog(null, "That word does not exist.");
@@ -78,7 +87,7 @@ public class Model extends WordleObservable {
         // TODO - what information needs to go in the WordleDTO?
         // This DTO (data transfer object) should be an immutable object used to send messages from the Model to
         // anyone who cares.
-        WordleDTO wordleDTO = new WordleDTO();
+
 
         WordleGridRowDTO wordleGridRowDTO = null;
         List<WordleGridSquareDTO> squares = new ArrayList<>();
