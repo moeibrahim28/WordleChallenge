@@ -10,7 +10,7 @@ public class WordEntry extends JTextField {
     public WordEntry(Controller controller) {
         super(null, 5);
         this.addActionListener((e) -> {
-            if(isTextValid()) {
+            if (isTextValid()) {
                 System.out.println("Valid");
                 try {
                     controller.onWordSubmitted(getText());
@@ -18,10 +18,10 @@ public class WordEntry extends JTextField {
                     throw new RuntimeException(ex);
                 }
                 setText("");
-            }
-            else {
+            } else {
                 System.out.println("Invalid");
                 // TODO - how do you want to handle an invalid word?
+                JOptionPane.showMessageDialog(null, "That word does not exist.");
             }
         });
     }
@@ -29,6 +29,7 @@ public class WordEntry extends JTextField {
     private String normalized() {
         return getText().toUpperCase(Locale.ROOT).trim().replaceAll("[^A-Z]+", "");
     }
+
     private boolean isTextValid() {
         String text = normalized();
         return text.length() == 5;

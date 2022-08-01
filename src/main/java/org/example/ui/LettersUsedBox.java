@@ -5,7 +5,6 @@ import org.example.dto.WordleGridDTO;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.*;
 import java.util.List;
 
 public class LettersUsedBox extends JPanel {
